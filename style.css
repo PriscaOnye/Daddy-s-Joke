@@ -1,1 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: 'Courier Prime', monospace, 'Roboto', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: green;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+
+    height: fit-content;
+    max-height: 90vh;
+
+    overflow: auto;
+    padding: 1rem;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 15px;
+    background-color: white;
+}
+
+p#funWarning {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #5a5a5a;
+    padding: 1rem 0;
+    border-bottom: 1.5px solid #5a5a5a;
+    text-align: center;
+}
+
+p#joke {
+    padding: 1.5rem 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-align: center;
+}
+
+button#nextJoke {
+    width: 45%;
+    padding: 1rem;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2.5em;
+    color: white;
+    background-color: green;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+button#nextJoke:hover {
+    transition: 0.5s;
+    transform: translate(0, -5px);
+    background-color: #1e9b4c;
+}
+
+.share {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socialShare, .copyJoke {
+    width: 80%;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socialShare {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.copyJoke {
+    margin-bottom: 1rem;
+}
+
+button.socialButton {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.socialButton:hover{
+    transition: 0.5s;
+    transform: translate(0, -10px);
+}
+
+button.socialButton:hover svg{
+    fill: #ffffff;
+}
+
+button#facebook:hover {
+    background-color: #3a5999;
+}
+
+button#whatsApp:hover {
+    background-color: #25d366;
+}
+
+button#twitter:hover {
+    background-color: #55acee;
+}
+
+button#linkedIn:hover {
+    background-color: #0077b5;
+}
+
+button#instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+button#copyText:hover {
+    background-color: #eb4924;
+}
+
+button#github:hover {
+    background-color: #2b3137;
+}
+
+
+
+@media screen and (min-width: 425px) {
+    p#joke {
+        padding: 1.5rem 0;
+        font-size: 22px;
+    }
+
+    .socialShare, .copyJoke {
+        width: 100%;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    button.socialButton {
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    main {
+        width: 85%;
+        max-width: 800px;
+        
+        height: fit-content;
+        max-height: 90vh;
+    
+        padding: 1.5rem 2rem;
+        overflow: auto;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        width: 70%;
+        max-width: 800px;
+        
+        height: fit-content;
+        max-height: 80vh;
+    
+        padding: 1.5rem 2rem;
+        overflow: auto;
+    }
+
+    .share {
+        /* gap: 1rem; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .socialShare {
+        width: 50%;
+    }
+
+    .copyJoke {
+        width: 20%;
+    }
+}
